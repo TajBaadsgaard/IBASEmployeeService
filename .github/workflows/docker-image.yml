@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
         with:
           login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
           username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+          password: ${{ secrets.REGISTRY_PASSWORD1 }}
     
       - name: "Build and Push"
         uses: docker/build-push-action@v2
